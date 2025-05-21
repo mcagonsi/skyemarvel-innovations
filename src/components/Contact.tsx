@@ -11,7 +11,7 @@ import { useState } from "react";
 
 function Modal({ message, onClose }: { message: string; onClose: () => void }) {
     return (
-        <div className="fixed inset-1 z-50 flex items-center justify-center bg-opacity-20">
+        <motion.div initial={{ y: 500, opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.3,delay:0.1}} className="fixed inset-1 z-50 flex items-center justify-center bg-opacity-20">
             <div className="bg-white p-6 rounded-md shadow-xl max-w-md w-full relative">
                 <h2 className="text-xl text-black font-semibold mb-2">Thank You!</h2>
                 <p className="text-gray-700 mb-4">{message}</p>
@@ -28,7 +28,7 @@ function Modal({ message, onClose }: { message: string; onClose: () => void }) {
                     Close
                 </button>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
@@ -84,10 +84,10 @@ const DropUsAMessage = () => {
 
             <h3 className="font-bold text-xl text-center my-8">Or</h3>
             <div className="flex flex-col justify-start items-start gap-4 ">
-                <a href="https://api.whatsapp.com/send?phone=2348100000000" target="_blank" rel="noopener noreferrer" className="underline items-center text-white">
+                <a href="https://api.whatsapp.com/send?phone=17097274982" target="_blank" rel="noopener noreferrer" className="underline items-center text-white">
                     <BsWhatsapp className="text-white mb-4 mr-2 text-2xl inline-block" /> Send us a message on whatsapp
                 </a>
-                <a href="tel:+2348100000000" className="underline items-center text-white">
+                <a href="tel:+17097274982" className="underline items-center text-white">
                     <IoCall className="text-white mb-4 mr-2 text-2xl inline-block" /> Call us now !
                 </a>
             </div>
@@ -148,6 +148,7 @@ const WeConnectWithYou = () => {
                     Drop Your Contact</Button>
             </form>
             <div className="mx-auto w-fit "><SocialMedia /></div>
+
             {/* Modal */}
             {showModal && <Modal message={modalMessage} onClose={() => setShowModal(false)} />}
             

@@ -79,9 +79,13 @@ const WhyChooseUs = () => {
 }
 export default function AboutUs() {
     return (
-        <div id="about" className="flex flex-wrap items-start justify-center w-full h-full ">
+        <motion.div
+        initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.7}}    id="about" className="flex flex-wrap items-start justify-center w-full h-full ">
             <WhoWeAre />
             <WhyChooseUs />
-        </div>
+        </motion.div>
     )
 }

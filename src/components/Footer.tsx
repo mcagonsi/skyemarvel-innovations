@@ -26,7 +26,7 @@ export default function Footer() {
                         <a href="#" target="_blank" rel="noopener noreferrer">
                             <FaFacebookF className="text-white hover:text-[#00CCFF] transition duration-300 ease-in-out" />
                         </a>
-                        <a href="tel:+2348100000000" target="_blank" rel="noopener noreferrer">
+                        <a href="tel:+17097645352" target="_blank" rel="noopener noreferrer">
                             <IoCall className="text-white hover:text-[#00CCFF] transition duration-300 ease-in-out" />
                         </a>
                         <a href="#" target="_blank" rel="noopener noreferrer">

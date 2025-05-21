@@ -32,7 +32,9 @@ export default function Services() {
                 transition={{ duration: 0.5, delay:0.8 }}   className="text-center text-white font-bold text-3xl mb-8">Our Services</motion.h2>
             <motion.div
                 className="flex pt-8 gap-8 w-max"
-                animate={{ x: ["0%", "-50%"] }}
+                initial={{ x: "0%" }}
+                whileInView={{ x: "-50%" }}
+                // animate={{ x: ["0%", "-50%"] }}
                 transition={{
                     ease: "linear",
                     duration: 30,

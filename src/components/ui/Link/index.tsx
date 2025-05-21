@@ -2,6 +2,8 @@ import { AnchorHTMLAttributes } from "react";
 import { linkVariants, LinkVariant } from "./variants";
 import NextLink from "next/link";
 
+// Define the Link component's props
+// This interface extends the standard anchor attributes and adds custom props
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
     variant?: LinkVariant;
     href: string;

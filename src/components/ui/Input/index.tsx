@@ -1,6 +1,8 @@
 import { InputHTMLAttributes } from "react";
 import { inputVariants, InputVariant } from "./variants";
 
+// Define the InputField component's props
+// This interface extends the standard input attributes and adds custom props
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     placeholder?: string;

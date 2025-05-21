@@ -1,6 +1,8 @@
 import { ButtonHTMLAttributes } from "react";
 import { buttonVariants, ButtonVariant } from "./variants";
 
+// Define the Button component's props
+// This interface extends the standard button attributes and adds custom props
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: ButtonVariant;
     isFullWidth?: boolean;
