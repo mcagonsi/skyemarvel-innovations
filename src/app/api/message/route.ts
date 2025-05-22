@@ -65,13 +65,7 @@ export async function POST(request: Request) {
         to: process.env.GMAIL_USER,
         subject: "New Customer Message!",
         html: senderContent,
-        attachments: [
-            {
-                filename: 'footer_logo2.png',
-                path: './public/footer_logo2.png',
-                cid: 'footerlogo' 
-            }
-        ],
+       
     };
 
     //setting up the no-reply email
@@ -80,13 +74,7 @@ export async function POST(request: Request) {
         to: message.email,
         subject: "Automatic Reply - Thank you for contacting us",
         html: noReplyContent,
-        attachments: [
-            {
-                filename: 'footer_logo2.png',
-                path: './public/footer_logo2.png',
-                cid: 'footerlogo' 
-            }
-        ],
+        
 
     };
 
